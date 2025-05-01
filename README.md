@@ -35,3 +35,12 @@ git branchで切った「feature/~~~ 」に移動することができるコマ�
 __●git checkout -b feature/~~~__  
 git branchとgit checkoutを同時に行なってくれるコマンド。  
 ブランチを切る＆移動を一気に行うことができる。  
+
+## パッケージ管理について
+本開発ではnpmを採用します。  
+開発をスタートする際は  
+<pre>
+npm run dev
+<pre>
+でローカルホストを立ち上げましょう。
+
