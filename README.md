@@ -6,13 +6,23 @@
 developブランチから「feature/自分の名前」でブランチを切ってください。
 例：　feature/Taro-Tanaka
 
-●ブランチの切り方
+__●ブランチの切り方__
 ①git branch　(自分の現在のブランチがmainになっているかを確認)
 ②git branch feature/Taro-Tanaka　もしくは　git checkout -b feature/Taro-Tanaka
 ③git checkout feature/Taro-Tanaka　（②でcheckout -bをしているのであればこのコマンドは不要）
 
-●git branch
+__●git branch__
 ブランチの現在地を確認するコマンド
+mainブランチ：実際にリリースするブランチ。最終的に全てのブランチはmainブランチにマージされる。
+developブランチ：mainにマージする前に一旦featureブランチを集約するブランチ。
+featureブランチ：作業・開発を行うブランチ。
 
-●git branch ~~~
-~~~ 
+__●git branch feature/~~~__
+「feature/~~~ 」というブランチを切ることができるコマンド
+
+__●git checkout feature/~~~__
+git branchで切った「feature/~~~ 」に移動することができるコマンド
+
+__●git checkout -b feature/~~~__
+git branchとgit checkoutを同時に行なってくれるコマンド。
+ブランチを切る＆移動を一気に行うことができる。
