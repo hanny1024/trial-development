@@ -4,6 +4,10 @@ import styles from "../../assets/css/module.module.css"
 const Header = () => {
   const navigate = useNavigate();
 
+const handleClickToTop = () => {
+  navigate("/top")
+}
+
   const handleClickToLogin = () =>{
     navigate('/login')
   }
@@ -15,6 +19,7 @@ const Header = () => {
           src = "/Header/HeaderLogo.png" 
           alt="headerLogo" 
           className={styles.headerLogo}
+          onClick={handleClickToTop}
         />
       </div>
       <div className={styles.headerRightButtons}>
