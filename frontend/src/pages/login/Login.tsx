@@ -1,9 +1,10 @@
+import Form from "../../components/components/Form"
 
 
 const Login = () => {
   return (
     <>
-      aaa
+      <Form />
     </>
   )
 }
