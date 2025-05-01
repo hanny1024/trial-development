@@ -5,7 +5,7 @@ const Header = () => {
   const navigate = useNavigate();
 
 const handleClickToTop = () => {
-  navigate("/top")
+  navigate("/")
 }
 
   const handleClickToLogin = () =>{
