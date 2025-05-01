@@ -41,6 +41,6 @@ git branchとgit checkoutを同時に行なってくれるコマンド。
 開発をスタートする際は  
 <pre>
 npm run dev
-<pre>
+<pre>  
 でローカルホストを立ち上げましょう。
 
