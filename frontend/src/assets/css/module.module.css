@@ -1,0 +1,56 @@
+/* ヘッダー */
+.headerLeftLogo {
+  margin-left: 20px;
+}
+
+.headerLogo {
+  height: 100px;
+  width: 100px;
+}
+
+.headerRightButtons {
+  margin-right: 20px;
+}
+
+.headerButtons{
+  background-color: transparent;
+}
+
+.headerButtons:hover {
+  background-color: rgb(237, 237, 237);
+  border: none;
+}
+
+.headerButtons:active {
+  background-color: rgb(182, 182, 182);
+  transform: scale(0.95);
+  border: none;
+}
+
+/* フッター */
+.footerLeftText {
+  display: flex;
+}
+
+.footerTexts {
+  margin-left: 15px;
+  background-color: transparent;
+}
+
+.footerTexts:hover {
+  background-color: rgb(237, 237, 237);
+  border: none;
+}
+
+.footerTexts:active {
+  background-color: rgb(182, 182, 182);
+  transform: scale(0.95);
+  border: none;
+}
+
+/* レイアウト */
+.mainContents {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
