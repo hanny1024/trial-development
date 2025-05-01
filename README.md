@@ -5,11 +5,11 @@ __※現場でもREADMEに開発の進め方や開発の規約について書か
 ## 命名規則について
 LCC（ローワーキャメルケース）を採用します。  
 例：
-<pre>
+```
 <div className = lowerCamelCase>
   LCCで命名しましょう。
 </div>
-</pre>
+```
 
 ## ブランチの切り方
 developブランチから「feature/自分の名前」でブランチを切ってください。  
