@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import styles from "../../assets/css/module.module.css";
+import { useNavigate } from "react-router-dom";
 
 type FormValues = {
   name: string;
@@ -9,6 +10,8 @@ type FormValues = {
 };
 
 const ContactForm: React.FC = () => {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -18,6 +21,7 @@ const ContactForm: React.FC = () => {
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     console.log("送信データ:", data);
     alert("お問い合わせを受け付けました。");
+    navigate("/")
   };
 
   return (

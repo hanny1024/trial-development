@@ -14,6 +14,14 @@ const Header = () => {
     navigate("/login");
   };
 
+  const handleClickToUserInfo = () => {
+    if(isLoggedIn){
+      navigate("/userInfo")
+    }else{
+      navigate("/login")
+    }
+  }
+
   return (
     <header>
       <div className={styles.headerLeftLogo}>
@@ -34,7 +42,12 @@ const Header = () => {
             ログインはこちら
           </button>
         )}
-        <button className={styles.headerButtons}>会員情報</button>
+        <button 
+          className={styles.headerButtons}
+          onClick={handleClickToUserInfo}
+        >
+          会員情報
+        </button>
         <button className={styles.headerButtons}>メニュー</button>
       </div>
     </header>
