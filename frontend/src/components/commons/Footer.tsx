@@ -1,11 +1,17 @@
 import { useNavigate } from "react-router-dom"
 import styles from "../../assets/css/module.module.css"
+import { useAuth } from "../../context/AuthContext";
 
 const Footer = () => {
   const navigate = useNavigate();
+  const { isLoggedIn } = useAuth();
 
   const handleClickToContact = () => {
-    navigate("/contact")
+    if(isLoggedIn){
+      navigate("/contact")
+    }else{
+      navigate("/login")
+    }
   }
 
   return (

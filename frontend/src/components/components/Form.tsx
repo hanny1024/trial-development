@@ -45,6 +45,7 @@ const Form: React.FC = () => {
   return (
     <div className={styles.formFrame}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <p>ログインしてください。</p>
         <div>
           <label htmlFor="email" className={styles.label}>メール:</label>
           <input
