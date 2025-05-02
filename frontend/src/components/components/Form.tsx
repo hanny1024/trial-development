@@ -3,6 +3,7 @@ import styles from "../../assets/css/module.module.css";
 import { mockUsers } from '../../mocks/user';
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 interface IFormInput {
   email: string;
@@ -29,6 +30,12 @@ const Form: React.FC = () => {
       setLoginUser(null);
       setLoginError("メールアドレスまたはパスワードが間違っています。");
     }
+  };
+
+  const { login } = useAuth();
+
+  const handleLogin = () => {
+    login();
   };
 
   if (loginUser) {
@@ -65,7 +72,7 @@ const Form: React.FC = () => {
           {errors.password && <p className={styles.errorMessage}>{errors.password.message}</p>}
         </div>
 
-        <button type="submit" className={styles.button}>ログイン</button>
+        <button type="submit" className={styles.button} onClick={handleLogin}>ログイン</button>
         {loginError && <p className={styles.errorMessage}>{loginError}</p>}
       </form>
     </div>

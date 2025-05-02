@@ -1,69 +1,44 @@
-import { useNavigate } from "react-router-dom"
-import styles from "../../assets/css/module.module.css"
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import styles from "../../assets/css/module.module.css";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const { isLoggedIn, logout } = useAuth();
 
-const handleClickToTop = () => {
-  navigate("/")
-}
-
-  const handleClickToLogin = () =>{
-    navigate('/login')
-  }
-
-  useEffect(() => {
-    const token = localStorage.getItem('authToken');
-    if(token){
-      setIsLoggedIn(true);
-    }
-  }, []);
-
-  const handleClickToLogout = () => {
-      localStorage.removeItem('authToken');
-      setIsLoggedIn(false);
+  const handleClickToTop = () => {
+    navigate("/");
   };
 
-  useEffect(() => {
-    const checkToken = () => {
-      const token = localStorage.getItem('authToken');
-      setIsLoggedIn(!!token);
-    };
-  
-    checkToken(); // 初回チェック
-  
-    const interval = setInterval(checkToken, 1000); // 毎秒チェック
-  
-    return () => clearInterval(interval);
-  }, []);
+  const handleClickToLogin = () => {
+    navigate("/login");
+  };
 
   return (
     <header>
       <div className={styles.headerLeftLogo}>
         <img 
-          src = "/Header/HeaderLogo.png" 
+          src="/Header/HeaderLogo.png" 
           alt="headerLogo" 
           className={styles.headerLogo}
           onClick={handleClickToTop}
         />
       </div>
       <div className={styles.headerRightButtons}>
-      {isLoggedIn ? (
-        <button className={styles.headerButtons} onClick={handleClickToLogout}>
-          ログアウト
-        </button>
-      ) : (
-        <button className={styles.headerButtons} onClick={handleClickToLogin}>
-          ログインはこちら
-        </button>
-      )}
+        {isLoggedIn ? (
+          <button className={styles.headerButtons} onClick={logout}>
+            ログアウト
+          </button>
+        ) : (
+          <button className={styles.headerButtons} onClick={handleClickToLogin}>
+            ログインはこちら
+          </button>
+        )}
         <button className={styles.headerButtons}>会員情報</button>
         <button className={styles.headerButtons}>メニュー</button>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
