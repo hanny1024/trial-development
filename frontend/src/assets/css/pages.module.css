@@ -1,0 +1,60 @@
+/* トップページのCSS */
+.categoryList{
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  background-color: rgb(195, 195, 195);
+}
+
+.categories{
+  background-color: transparent;
+}
+
+.categories:hover {
+  background-color: rgb(187, 185, 185);
+  border: none;
+}
+
+.categories:active {
+  background-color: rgb(182, 182, 182);
+  transform: scale(0.95);
+  border: none;
+}
+
+.topFrame {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.topMessage {
+  border-bottom: 1px solid rgb(196, 196, 196);
+  font-size: 20px;
+}
+
+.topPageFrame img{
+  border: 1px solid rgb(152, 151, 151);
+  width: 150px;
+  height: 150px;
+  margin-left: 30px;
+}
+
+.topImages {
+  display: flex;
+}
+
+.topicFrame {
+  text-align: center;
+}
+
+.topicFrame:hover {
+  background-color: rgb(231, 231, 231);
+  border: none;
+}
+
+.topicFrame:active {
+  background-color: rgb(182, 182, 182);
+  transform: scale(0.95);
+  border: none;
+}
